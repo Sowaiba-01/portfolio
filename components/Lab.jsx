@@ -198,9 +198,11 @@ export default function Lab() {
         </div>
       )}
       <div className={'lab-stage' + (entered ? ' on' : '')}>
+        <div className="car-outer">
         <div className="car-wrap" ref={wrapRef}>
           <button className="car-nav prev" aria-label="Previous experiment" onClick={() => engineRef.current.step && engineRef.current.step(-1)}>‹</button>
           <button className="car-nav next" aria-label="Next experiment" onClick={() => engineRef.current.step && engineRef.current.step(1)}>›</button>
+        </div>
         </div>
         <div className="car-cap">now facing: <b>{CARDS[act].title}</b> · drag to rotate · click the front card to open it</div>
         <div className="car-dots">
