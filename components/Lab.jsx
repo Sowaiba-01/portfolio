@@ -12,7 +12,6 @@ const CARDS = [
   { title: 'Devops-swarm · self-correcting agent', live: false, node: <AgentCard /> },
   { title: 'Ask-My-Portfolio · RAG', live: false, node: <RagCard /> },
 ];
-
 export default function Lab() {
   const [mounted, setMounted] = useState(false);
   const [entered, setEntered] = useState(false);
