@@ -1,10 +1,29 @@
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
+  metadataBase: new URL('https://sowaibaarshad.com'),
   title: 'Sowaiba Arshad | AI/ML Engineer & Software Developer',
   description:
     'Portfolio of Sowaiba Arshad, an AI/ML Engineer and Software Developer specializing in LLMs, RAG systems, and computer vision. Silver Medalist at UET Taxila.',
+  keywords: ['Sowaiba Arshad', 'AI engineer', 'ML engineer', 'machine learning', 'LLM', 'RAG', 'computer vision', 'software developer', 'UET Taxila'],
+  authors: [{ name: 'Sowaiba Arshad' }],
   icons: { icon: '/favicon.png' },
+  openGraph: {
+    title: 'Sowaiba Arshad | AI/ML Engineer & Software Developer',
+    description:
+      'AI/ML Engineer specializing in LLMs, RAG systems, and computer vision. Portfolio with live deployed model demos.',
+    url: 'https://sowaibaarshad.com',
+    siteName: 'Sowaiba Arshad',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Sowaiba Arshad | AI/ML Engineer & Software Developer',
+    description:
+      'AI/ML Engineer specializing in LLMs, RAG systems, and computer vision. Portfolio with live deployed model demos.',
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }) {
@@ -16,7 +35,10 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
