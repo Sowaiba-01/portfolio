@@ -29,7 +29,7 @@ export const metadata = {
     'Portfolio of Sowaiba Arshad, an AI/ML Engineer and Software Developer specializing in LLMs, RAG systems, and computer vision. Silver Medalist at UET Taxila.',
   keywords: ['Sowaiba Arshad', 'AI engineer', 'ML engineer', 'machine learning', 'LLM', 'RAG', 'computer vision', 'software developer', 'UET Taxila'],
   authors: [{ name: 'Sowaiba Arshad' }],
-  icons: { icon: '/favicon.png' },
+  icons: { icon: '/favicon.png', apple: '/apple-icon.png' },
   openGraph: {
     title: 'Sowaiba Arshad | AI/ML Engineer & Software Developer',
     description:
