@@ -60,11 +60,11 @@ export default function Hero() {
       (function ch() {
         if (!logRef.current) return;
         span.textContent = txt.slice(0, c);
-        if (c < txt.length) { c += 2; later(ch, 11); }
-        else { li++; later(typeLine, 130); }
+        if (c < txt.length) { c += 3; later(ch, 9); }
+        else { li++; later(typeLine, 90); }
       })();
     }
-    later(typeLine, 350);
+    later(typeLine, 120);
     return () => { alive = false; timers.forEach(clearTimeout); };
   }, []);
 
