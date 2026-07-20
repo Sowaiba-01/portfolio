@@ -6,6 +6,7 @@
   --on-accent:#0b0e14; --sb-bg:rgba(11,14,20,.88);
   --bar:44px;
 }
+
 [data-theme="light"]{
   --bg:#e7ebf3; --panel:#ffffff; --panel2:#f0f3f9;
   --border:#b9c6d9; --border2:#93a5bf;
