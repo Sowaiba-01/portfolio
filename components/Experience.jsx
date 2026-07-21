@@ -6,7 +6,7 @@ const JOBS = [
     tab: 'Independent',
     role: 'Independent AI/ML Engineer',
     org: null,
-    date: 'JAN 2025 – PRESENT',
+    date: 'JAN 2026 – PRESENT',
     points: [
       'Designed, trained, and deployed three production grade ML systems end to end, from dataset preparation to public inference APIs on Hugging Face Spaces.',
       'ThoraxNet: chest X-ray classifier (BioMedCLIP ViT-B/16) at mean AUC 0.8215 across 14 pathologies, with MC-Dropout uncertainty and auto-generated radiology reports.',
