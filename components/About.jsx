@@ -16,7 +16,7 @@ export default function About() {
         </div>
         <div className="win facts reveal">
           <div className="row"><span className="k">cgpa</span><span className="val g">3.94 / 4.00 · silver medal</span></div>
-          <div className="row"><span className="k">experience</span><span className="val">1.5+ years</span></div>
+          <div className="row"><span className="k">experience</span><span className="val">since 2022 · AI/ML since 2024</span></div>
           <div className="row"><span className="k">github</span><span className="val">{repos !== null ? `${repos} public repos` : '9+ public projects'}</span></div>
           <div className="row"><span className="k">huggingface</span><span className="val v">2K+ dataset downloads</span></div>
           <div className="row"><span className="k">focus</span><span className="val">LLMs · RAG · vision</span></div>

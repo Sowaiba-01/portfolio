@@ -28,13 +28,6 @@ const PROJECTS = [
     link: 'github ↗',
   },
   {
-    name: 'AgroVision-Net',
-    href: 'https://github.com/Sowaiba-01/AgroVision-Net',
-    desc: 'Deep learning system for plant disease classification across 38 categories, fine-tuning EfficientNetB0 on the PlantVillage dataset with a Gradio web interface.',
-    stack: 'python · efficientnetb0',
-    link: 'github ↗',
-  },
-  {
     name: 'Ask-My-Portfolio RAG',
     href: '#lab',
     desc: 'The retrieval engine running inside this site. A TF-IDF index over my profile with cosine ranking, running fully client-side with no server.',
