@@ -11,10 +11,9 @@ export default function About() {
       <div className="about-grid">
         <div className="about-col reveal">
           <p>
-            I am an <strong>AI/ML Software Engineer</strong> working on medical imaging and LLM retrieval
-            systems. I train models that quantify their own uncertainty and cite their own sources, then
-            deploy them as live inference APIs. I combine a strong foundation in deep learning and computer
-            vision with full-stack engineering experience.
+            I am an <strong>AI/ML Software Engineer</strong> who takes models from research to production.
+            Computer vision, large language models, and retrieval systems, trained end to end and deployed
+            live, backed by strong deep learning and full-stack foundations.
           </p>
 
           <p className="about-lead">Some technologies I work with:</p>

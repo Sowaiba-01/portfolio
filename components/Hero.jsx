@@ -21,7 +21,7 @@ export default function Hero() {
       ['$ ./init sowaiba.dev', 'p'],
       ['[ ok ] role: ai/ml engineer · software developer', 'ok'],
       ['[ ok ] ' + gh, 'ok'],
-      ['[ ok ] huggingface: 2K+ dataset downloads', 'ok'],
+      ['[ ok ] huggingface: 2K+ dataset · 14K+ model downloads', 'ok'],
       ['[ ok ] honors: silver medalist · cgpa 3.94/4.00', 'ok'],
     ];
     let li = 0;
@@ -77,7 +77,7 @@ export default function Hero() {
           <span className="pp">&gt;</span> optimizing: <span id="typed" ref={typedRef}></span><span className="cur">▍</span>
         </div>
         <p className="desc postboot">
-          I&apos;m an <b>AI/ML Engineer and Software Developer</b> specializing in Large Language Models and Retrieval Augmented Generation systems. <b>Silver Medalist</b> in Software Engineering at UET Taxila.
+          <b>AI/ML Software Engineer</b> turning research-grade models into production systems: computer vision, LLMs, RAG, and autonomous agents, all shipped live.
         </p>
         <div className="hero-cta postboot">
           <a className="btn solid" href="#projects">view projects</a>

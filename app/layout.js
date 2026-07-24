@@ -24,7 +24,7 @@ const mono = JetBrains_Mono({
 
 export const metadata = {
   metadataBase: new URL('https://sowaibaarshad.com'),
-  title: 'Sowaiba Arshad | AI/ML Engineer & Software Developer',
+  title: 'Sowaiba',
   description:
     'Portfolio of Sowaiba Arshad, an AI/ML Engineer and Software Developer specializing in LLMs, RAG systems, and computer vision. Silver Medalist at UET Taxila.',
   keywords: ['Sowaiba Arshad', 'AI engineer', 'ML engineer', 'machine learning', 'LLM', 'RAG', 'computer vision', 'software developer', 'UET Taxila'],
