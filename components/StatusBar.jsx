@@ -6,7 +6,6 @@ const GMAIL = 'https://mail.google.com/mail/?view=cm&fs=1&to=sowaibaarshad@gmail
 
 const LINKS = [
   ['#about', 'about'],
-  ['#skills', 'skills'],
   ['#experience', 'experience'],
   ['#projects', 'projects'],
   ['#lab', 'lab'],

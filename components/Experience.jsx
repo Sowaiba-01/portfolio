@@ -81,9 +81,9 @@ export default function Experience() {
             {j.org && (<>{' '}<span className="at">@</span> <span className="org">{j.org}</span></>)}
           </h3>
           <div className="xp-date">{j.date}</div>
-          <ul>
+          <ul key={act}>
             {j.points.map((p, i) => (
-              <li key={i}>{p}</li>
+              <li key={i} style={{ animationDelay: `${0.06 + i * 0.09}s` }}>{p}</li>
             ))}
           </ul>
           <div className="xp-tags">stack: <b>{j.stack}</b></div>

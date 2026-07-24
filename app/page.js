@@ -1,7 +1,6 @@
 import StatusBar from '@/components/StatusBar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-import Skills from '@/components/Skills';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
 import Lab from '@/components/Lab';
@@ -16,7 +15,6 @@ export default function Page() {
       <Hero />
       <main className="container" id="main">
         <About />
-        <Skills />
         <Experience />
         <Projects />
         <Lab />

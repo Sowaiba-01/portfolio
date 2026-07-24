@@ -32,7 +32,7 @@ const PROJECTS = [
     href: '#lab',
     desc: 'The retrieval engine running inside this site. A TF-IDF index over my profile with cosine ranking, running fully client-side with no server.',
     stack: 'tf-idf · ir · react',
-    link: 'try it in the live lab ↓',
+    link: 'try below ↓',
   },
 ];
 

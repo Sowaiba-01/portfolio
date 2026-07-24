@@ -138,6 +138,7 @@ body.booted .postboot{opacity:1;transform:none}
 .rag-hint{color:var(--dim);font-size:11px;line-height:1.9;padding-top:6px}
 .chunk{margin:9px 0;border:1px solid var(--border);border-radius:8px;padding:9px 12px;opacity:0;transform:translateY(8px);animation:chin .35s forwards}
 @keyframes chin{to{opacity:1;transform:none}}
+@keyframes floatUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .chunk .ch-top{display:flex;justify-content:space-between;font-size:10px;color:var(--dim);margin-bottom:4px}
 .chunk .ch-top b{color:var(--cyan);font-weight:500}
 .chunk .ch-bar{height:3px;border-radius:2px;background:var(--border);margin-bottom:6px}
@@ -164,29 +165,33 @@ body.booted .postboot{opacity:1;transform:none}
 }
 
 /* ── section headers ────────────────────────── */
-.sec{display:flex;align-items:center;gap:14px;margin-bottom:36px}
-.sec .path{font-family:var(--font-mono),monospace;font-size:15px;color:var(--green)}
-.sec h2{font-size:clamp(21px,2.8vw,27px);font-weight:700;white-space:nowrap}
-.sec::after{content:'';height:1px;background:var(--border);flex:1}
+.sec{display:flex;align-items:baseline;gap:12px;margin-bottom:28px}
+.sec .path{font-family:var(--font-mono),monospace;font-size:13px;color:var(--green)}
+.sec h2{font-size:clamp(19px,2.4vw,23px);font-weight:700;white-space:nowrap}
+.sec::after{content:'';height:1px;background:var(--border);flex:1;align-self:center}
 
 /* ── about ──────────────────────────────────── */
-.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start}
-.about-grid p{color:var(--text2);margin-bottom:14px;font-size:15px}
-.about-grid strong{color:var(--text)}
-.facts{font-family:var(--font-mono),monospace;font-size:12.5px}
-.facts .row{display:flex;justify-content:space-between;padding:11px 16px;border-bottom:1px solid var(--border)}
+.about-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:40px;align-items:start}
+@media(max-width:860px){
+  .about-grid{grid-template-columns:1fr}
+  .about-grid .facts{display:none}
+}
+.about-col{min-width:0}
+.about-col p{color:var(--text2);font-size:15px;line-height:1.85}
+.facts{font-family:var(--font-mono),monospace;font-size:12px;margin-top:34px}
+.facts .row{display:flex;justify-content:space-between;gap:12px;padding:11px 16px;border-bottom:1px solid var(--border)}
 .facts .row:last-child{border-bottom:none}
-.facts .k{color:var(--dim)}
-.facts .val{color:var(--text)}
+.facts .k{color:var(--dim);white-space:nowrap}
+.facts .val{color:var(--text);text-align:right}
 .facts .val.g{color:var(--green)}
 .facts .val.v{color:var(--violet)}
-@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
-
-/* ── skills ─────────────────────────────────── */
-.skills-yaml{font-family:var(--font-mono),monospace;font-size:13px;line-height:2.3;padding:22px 26px}
-.skills-yaml .key{color:var(--violet)}
-.skills-yaml .chip{display:inline-block;color:var(--text2);border:1px solid var(--border2);border-radius:6px;padding:2px 10px;margin:0 3px 4px 0;font-size:12px;transition:all .15s;cursor:default}
-.skills-yaml .chip:hover{color:var(--cyan);border-color:var(--cyan);transform:translateY(-2px)}
+.about-col strong{color:var(--text);font-weight:600}
+.about-col .about-lead{margin-top:22px;color:var(--text2)}
+.tech-list{list-style:none;display:flex;flex-wrap:wrap;gap:8px 10px;margin:12px 0 0;padding:0}
+.tech-list li{position:relative;padding-left:16px;font-family:var(--font-mono),monospace;font-size:12.5px;color:var(--text2);opacity:0}
+.tech-list li::before{content:'▸';position:absolute;left:0;color:var(--green);font-size:11px}
+.about-col.visible .tech-list li{animation:floatUp .45s ease both}
+.about-note{margin-top:24px;font-family:var(--font-mono),monospace;font-size:12px;color:var(--dim);line-height:1.9}
 
 /* ── experience (tabbed) ────────────────────── */
 .xp-wrap{display:grid;grid-template-columns:158px minmax(0,1fr);gap:26px;align-items:start;max-width:900px}
@@ -202,7 +207,8 @@ body.booted .postboot{opacity:1;transform:none}
 .xp-panel .xp-role .org{color:var(--violet)}
 .xp-panel .xp-date{font-family:var(--font-mono),monospace;font-size:10.5px;color:var(--dim);letter-spacing:.1em;margin:6px 0 14px}
 .xp-panel ul{list-style:none;margin:0;padding:0}
-.xp-panel li{position:relative;padding-left:18px;margin-bottom:9px;color:var(--text2);font-size:13px;line-height:1.65}
+.xp-panel li{position:relative;padding-left:18px;margin-bottom:9px;color:var(--text2);font-size:13px;line-height:1.65;opacity:0}
+.xp-wrap.visible .xp-panel li{animation:floatUp .4s ease both}
 .xp-panel li::before{content:'▸';position:absolute;left:0;top:0;color:var(--green);font-size:11px}
 .xp-panel .xp-tags{margin-top:14px;font-family:var(--font-mono),monospace;font-size:10.5px;color:var(--dim)}
 .xp-panel .xp-tags b{color:var(--cyan);font-weight:500}
@@ -405,26 +411,20 @@ body.booted .postboot{opacity:1;transform:none}
 
 /* ── responsive pass ────────────────────────── */
 @media(max-width:768px){
-  .container{padding-left:18px;padding-right:18px}
-  section{padding:56px 0}
-  .sec{gap:10px;margin-bottom:26px}
-  .sec .path{font-size:13px}
-  .about-grid{gap:26px}
-  .about-grid p{font-size:14px}
-  .facts .row{padding:10px 14px;font-size:11.5px;gap:12px}
-  .skills-yaml{padding:16px 18px;font-size:12px;line-height:2.1}
-  .skills-yaml .chip{font-size:11px;padding:2px 8px}
-  .xp{margin-left:4px}
-  .xp-item{margin:0 0 16px 18px;padding:15px 16px}
-  .xp-item::before{left:-24px;top:20px}
-  .xp-item ul{font-size:13px}
-  .xp-role{font-size:15px}
-  .proj-grid{grid-template-columns:1fr;gap:14px}
-  .proj-body{padding:16px 17px 17px}
-  .lab-intro p{font-size:14px;line-height:1.8}
-  .edu{padding:20px 18px;gap:14px}
-  .edu-badges{gap:7px;font-size:11px}
-  .foot{padding:16px 18px;font-size:10.5px}
+  .container{padding-left:22px;padding-right:22px}
+  section{padding:70px 0}
+  .sec{gap:12px;margin-bottom:30px}
+  .about-col p{font-size:14.5px;line-height:1.85}
+  .about-col .about-lead{margin-top:26px}
+  .tech-list{gap:11px 14px;margin-top:16px}
+  .tech-list li{font-size:13px}
+  .about-note{margin-top:28px;font-size:12px}
+  .proj-grid{grid-template-columns:1fr;gap:16px}
+  .proj-body{padding:18px 19px 19px}
+  .lab-intro p{font-size:15px;line-height:1.9}
+  .edu{padding:22px 20px;gap:16px}
+  .edu-badges{gap:8px;font-size:11px}
+  .foot{padding:18px 20px;font-size:10.5px}
   /* live model cards */
   .lab-card .inner{padding:15px 16px}
   .chest-input{gap:11px}
