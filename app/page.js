@@ -20,7 +20,7 @@ export default function Page() {
         <Lab />
         <Education />
         <footer className="foot">
-          <span>© 2026 sowaiba arshad · all rights reserved</span>
+          <span>Built and designed by Sowaiba Arshad.<br />All rights reserved. ©</span>
         </footer>
       </main>
       <RevealInit />

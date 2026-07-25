@@ -14,13 +14,13 @@ const EDGES = [
   ['test', 'fix'], ['fix', 'test'], ['test', 'deploy'],
 ];
 const SEQ = [
-  ['issue', '#8b7cf8', <span key="0">agent picked up issue #42</span>],
-  ['sandbox', '#8b7cf8', <span key="1">spinning up secure sandbox…</span>],
-  ['code', '#8b7cf8', <span key="2">writing patch with LangGraph…</span>],
-  ['test', '#f47067', <span key="3"><b className="err">tests failed</b> · 2 assertions broken</span>],
-  ['fix', '#e3b341', <span key="4">self-correcting the patch…</span>],
-  ['test', '#3fb950', <span key="5"><b>tests passed</b> · 34/34 green</span>],
-  ['deploy', '#3fb950', <span key="6"><b>deployed</b> · PR ready for review</span>],
+  ['issue', '#82aaff', <span key="0">agent picked up issue #42</span>],
+  ['sandbox', '#82aaff', <span key="1">spinning up secure sandbox…</span>],
+  ['code', '#82aaff', <span key="2">writing patch with LangGraph…</span>],
+  ['test', '#ff6b6b', <span key="3"><b className="err">tests failed</b> · 2 assertions broken</span>],
+  ['fix', '#ffca85', <span key="4">self-correcting the patch…</span>],
+  ['test', '#64ffda', <span key="5"><b>tests passed</b> · 34/34 green</span>],
+  ['deploy', '#64ffda', <span key="6"><b>deployed</b> · PR ready for review</span>],
 ];
 
 export default function AgentCard() {
@@ -48,7 +48,7 @@ export default function AgentCard() {
             const dashed = a === 'fix' || (a === 'test' && b === 'fix');
             return (
               <line key={a + b} x1={A.x} y1={A.y} x2={B.x} y2={B.y}
-                stroke="rgba(139,124,248,.3)" strokeWidth="1.5"
+                stroke="rgba(100,255,218,.3)" strokeWidth="1.5"
                 strokeDasharray={dashed ? '4 4' : undefined} />
             );
           })}
@@ -57,7 +57,7 @@ export default function AgentCard() {
             return (
               <g key={nd.id}>
                 <circle cx={nd.x} cy={nd.y} r="14"
-                  fill={on ? activeColor + '22' : '#0b0e14'}
+                  fill={on ? activeColor + '22' : '#0a192f'}
                   stroke={on ? activeColor : '#5c6878'}
                   strokeWidth={on ? 3 : 1.5} />
                 <text x={nd.x} y={nd.y + 30} textAnchor="middle" fill="#8b98ab"

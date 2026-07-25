@@ -1,3 +1,19 @@
+'use client';
+
+const MAX_TILT = 9;
+
+function onMove(e) {
+  const c = e.currentTarget;
+  const r = c.getBoundingClientRect();
+  const px = (e.clientX - r.left) / r.width - 0.5;
+  const py = (e.clientY - r.top) / r.height - 0.5;
+  c.style.transform =
+    `perspective(800px) rotateX(${(-py * MAX_TILT).toFixed(2)}deg) rotateY(${(px * MAX_TILT).toFixed(2)}deg) translateY(-5px)`;
+}
+function onLeave(e) {
+  e.currentTarget.style.transform = '';
+}
+
 const PROJECTS = [
   {
     name: 'ThoraxNet',
@@ -46,6 +62,8 @@ export default function Projects() {
             className="proj win reveal"
             href={p.href}
             key={p.name}
+            onMouseMove={onMove}
+            onMouseLeave={onLeave}
             {...(p.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
           >
             <div className="proj-body">
