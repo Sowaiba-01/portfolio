@@ -23,10 +23,17 @@ const PROJECTS = [
     link: 'github ↗',
   },
   {
-    name: 'DeepGuard-XAI',
-    href: 'https://github.com/Sowaiba-01/DeepGuard-XAI',
-    desc: 'Deepfake detection platform built on a fine-tuned EfficientNet-B4, with GradCAM explainability that shows exactly where a video was manipulated, plus an InsightFace pipeline.',
-    stack: 'typescript · efficientnet',
+    name: 'DeepGuard',
+    href: 'https://github.com/Sowaiba-01/DeepGuard',
+    desc: 'Full-stack deepfake detection platform on a fine-tuned EfficientNet-B4 reaching 91.4% accuracy, with GradCAM explainability, video timeline analysis, and an InsightFace generation pipeline for adversarial testing.',
+    stack: 'next.js · fastapi · pytorch',
+    link: 'github ↗',
+  },
+  {
+    name: 'ModelSentinel',
+    href: 'https://github.com/Sowaiba-01/ModelSentinel',
+    desc: 'Open-source Python toolkit for ML observability: performance metrics, data drift detection, calibration, data-quality profiling, and a single weighted model health score, with a self-contained HTML report.',
+    stack: 'python · mlops · scikit-learn',
     link: 'github ↗',
   },
   {

@@ -6,7 +6,6 @@ const GMAIL = 'https://mail.google.com/mail/?view=cm&fs=1&to=sowaibaarshad@gmail
 
 export default function Hero() {
   const logRef = useRef(null);
-  const typedRef = useRef(null);
 
   useEffect(() => {
     // restartable: strict-mode dev double-mount cancels the first run and starts clean
@@ -28,27 +27,10 @@ export default function Hero() {
     const timers = [];
     const later = (fn, ms) => timers.push(setTimeout(() => { if (alive) fn(); }, ms));
 
-    function prompt() {
-      const ph = ['RAG retrieval pipelines', 'ViT-B/16 attention maps', 'LoRA fine-tunes', 'inference latency', 'hallucination eval suites', 'EfficientNet backbones'];
-      const el = typedRef.current;
-      if (!el) return;
-      let p = 0, c = 0, del = false;
-      (function t() {
-        if (!typedRef.current) return;
-        const w = ph[p];
-        el.textContent = w.slice(0, c);
-        if (!del && c < w.length) { c++; later(t, 60); }
-        else if (!del) { del = true; later(t, 1800); }
-        else if (c > 0) { c--; later(t, 28); }
-        else { del = false; p = (p + 1) % ph.length; later(t, 300); }
-      })();
-    }
-
     function typeLine() {
       if (!logRef.current) return;
       if (li >= lines().length) {
         document.body.classList.add('booted');
-        prompt();
         return;
       }
       const [txt, cls] = lines()[li];
@@ -70,18 +52,28 @@ export default function Hero() {
 
   return (
     <header className="hero container" id="home">
-      <div>
+      <div className="hero-left">
         <pre className="bootlog" ref={logRef} aria-hidden="true"></pre>
-        <h1 className="postboot">Sowaiba <span className="v">Arshad</span></h1>
-        <div className="promptbar postboot" aria-hidden="true">
-          <span className="pp">&gt;</span> optimizing: <span id="typed" ref={typedRef}></span><span className="cur">▍</span>
-        </div>
+        <h1 className="postboot">hi, <span className="v">Sowaiba</span> here.<span className="cur">▍</span></h1>
         <p className="desc postboot">
-          <b>AI/ML Software Engineer</b> turning research-grade models into production systems: computer vision, LLMs, RAG, and autonomous agents, all shipped live.
+          <b>AI/ML Software Engineer</b> turning research-grade models into production systems.
+          Computer vision, LLMs, RAG, and autonomous agents, trained end to end and shipped live.
+          I care about models that are reliable enough to actually trust.
         </p>
         <div className="hero-cta postboot">
-          <a className="btn solid" href="#projects">view projects</a>
-          <a className="btn" href={GMAIL} target="_blank" rel="noopener noreferrer">get in touch</a>
+          <a className="btn solid" href={GMAIL} target="_blank" rel="noopener noreferrer">say hi</a>
+        </div>
+        <div className="hero-rule postboot" />
+      </div>
+      <div className="hero-right postboot">
+        <div className="hero-portrait">
+          <svg className="hp-blob" viewBox="0 0 400 400" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <path fill="var(--violet)" d="M296,58 C352,84 386,150 380,214 C374,282 330,332 268,354 C206,376 130,372 78,332 C30,296 8,224 30,158 C52,92 112,50 178,42 C224,36 262,42 296,58 Z" />
+          </svg>
+          <div className="hp-photo">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/portrait.jpg" alt="Sowaiba Arshad" />
+          </div>
         </div>
       </div>
     </header>
