@@ -3,3 +3,6 @@ node_modules
 out
 .env*
 .DS_Store
+public/portrait.jpg
+public/me.png
+public/avatar.png
