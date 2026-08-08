@@ -19,7 +19,7 @@ const JOBS = [
     tab: 'NASTP',
     role: 'AI/ML Engineer',
     org: 'NASTP',
-    date: 'FEB 2024 – DEC 2024',
+    date: 'FEB 2024 – JUN 2024',
     points: [
       'Built RAG pipelines over internal technical documentation with chunking, embedding indexing, and cosine retrieval, attaching a source citation to every answer.',
       'Fine-tuned open-source LLMs with LoRA for domain question answering, plus an evaluation suite scoring answer faithfulness on a held-out set.',
@@ -33,7 +33,7 @@ const JOBS = [
     tab: 'NIC Pakistan',
     role: 'Software Engineer',
     org: 'National Incubation Center',
-    date: 'SEP 2022 – JAN 2024',
+    date: 'SEP 2022 – AUG 2023',
     points: [
       'Built full-stack marketing automation workflows integrating third-party APIs with custom backend logic.',
       'Containerized data pipelines and audience-tracking services with Docker for consistent deployment across environments.',
