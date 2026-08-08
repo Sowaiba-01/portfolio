@@ -26,24 +26,24 @@ export const metadata = {
   metadataBase: new URL('https://sowaibaarshad.com'),
   title: 'Sowaiba Arshad',
   description:
-    'Portfolio of Sowaiba Arshad, an AI/ML Engineer and Software Developer specializing in LLMs, RAG systems, and computer vision. Silver Medalist at UET Taxila.',
+    'Portfolio of Sowaiba Arshad, an AI/ML Software Engineer specializing in LLMs, RAG systems, and computer vision. Silver Medalist at UET Taxila.',
   keywords: ['Sowaiba Arshad', 'AI engineer', 'ML engineer', 'machine learning', 'LLM', 'RAG', 'computer vision', 'software developer', 'UET Taxila'],
   authors: [{ name: 'Sowaiba Arshad' }],
   alternates: { canonical: 'https://sowaibaarshad.com' },
   icons: { icon: '/favicon.png', apple: '/apple-icon.png' },
   openGraph: {
-    title: 'Sowaiba Arshad | AI/ML Engineer & Software Developer',
+    title: 'Sowaiba Arshad | AI/ML Software Engineer',
     description:
-      'AI/ML Engineer specializing in LLMs, RAG systems, and computer vision. Portfolio with live deployed model demos.',
+      'AI/ML Software Engineer specializing in LLMs, RAG systems, and computer vision. Portfolio with live deployed model demos.',
     url: 'https://sowaibaarshad.com',
     siteName: 'Sowaiba Arshad',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'Sowaiba Arshad | AI/ML Engineer & Software Developer',
+    title: 'Sowaiba Arshad | AI/ML Software Engineer',
     description:
-      'AI/ML Engineer specializing in LLMs, RAG systems, and computer vision. Portfolio with live deployed model demos.',
+      'AI/ML Software Engineer specializing in LLMs, RAG systems, and computer vision. Portfolio with live deployed model demos.',
   },
   robots: { index: true, follow: true },
 };
